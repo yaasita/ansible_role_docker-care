@@ -1,0 +1,7 @@
+---
+# docker-care
+docker_care_init: true
+docker_care_postfix: true
+docker_care_postfix_relayhost: 172.17.42.1
+docker_care_supervisor: true
+docker_care_sshd: true

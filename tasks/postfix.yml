@@ -1,0 +1,4 @@
+---
+
+- name: relay_hostを設定
+  lineinfile: dest=/etc/postfix/main.cf regexp="^relayhost" line="relayhost = {{ docker_care_postfix_relayhost }}"

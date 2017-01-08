@@ -1,0 +1,13 @@
+---
+
+- include: init.yml
+  when: docker_care_init == true
+
+- include: postfix.yml
+  when: docker_care_postfix == true
+
+- include: supervisor.yml
+  when: docker_care_supervisor == true
+
+- include: sshd.yml
+  when: docker_care_sshd == true

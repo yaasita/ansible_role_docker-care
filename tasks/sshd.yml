@@ -1,0 +1,10 @@
+---
+
+- name: sshdのパスワード認証許可
+  lineinfile: dest=/etc/ssh/sshd_config regexp="^PasswordAuthentication" line="PasswordAuthentication yes"
+
+- name: Rootログイン許可
+  lineinfile: dest=/etc/ssh/sshd_config regexp="^PermitRootLogin" line="PermitRootLogin yes"
+
+- name: 22番ポートでListenする
+  lineinfile: dest=/etc/ssh/sshd_config regexp="^Port" line="Port 22"

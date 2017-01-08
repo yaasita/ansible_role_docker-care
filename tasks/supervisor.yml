@@ -1,0 +1,8 @@
+---
+
+- name: supervisorのインストール
+  apt: pkg=supervisor state=installed
+
+- name: supervisor.confの配置
+  copy: src=supervisord.conf dest=/etc/supervisor/conf.d/supervisord.conf force=no
+
